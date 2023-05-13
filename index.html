@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom</title>
+</head>
+
+<body>
+    <section id="blogSection">
+        <article class="blog">
+            <h3 id="title-1">My Blog-1</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga pariatur laudantium cum soluta a fugit sint
+                culpa accusantium porro sequi eum asperiores, facere commodi dolorum aperiam facilis, corrupti labore!
+                Nostrum!</p>
+        </article>
+        <article class="blog">
+            <h3 id="title-2">My Blog-2</h3>
+            <p>Assumenda officia quos voluptatem architecto repudiandae similique recusandae, ipsa voluptatibus iusto
+                rem
+                quo? Adipisci voluptatem repellendus ullam, voluptatibus, quia error ut quod id iure inventore facere,
+                sit
+                minus repudiandae ipsa.</p>
+        </article>
+        <article class="blog">
+            <h3 id="title-3">My Blog-3</h3>
+            <p>Ipsum a deserunt tempora fugit suscipit perferendis sunt atque temporibus dolore nulla, nemo consequatur
+                nobis cum laboriosam quas odio animi necessitatibus, alias pariatur! Voluptates distinctio temporibus
+                natus,
+                labore ad perspiciatis.</p>
+        </article>
+        <article style="color:s" class="blog">
+            <h3 id="title-4">My Blog-4</h3>
+            <p>Debitis iure modi, ex ullam cupiditate earum ad alias! Impedit officia qui deleniti veritatis consectetur
+                ullam at dignissimos soluta, atque laudantium nobis accusantium explicabo officiis porro quae
+                perspiciatis
+                unde molestias?</p>
+        </article>
+
+        <ul id="nav">
+            <h1>Click here</h1>
+        </ul>
+    </section>
+    <script>
+        const title = document.getElementById('title-1');
+        // .style.color = 'blue'
+        title.style.color = 'darkblue'
+        title.style.background = 'aqua'
+        title.innerText = 'You can change the title of the article'
+        title.style.fontSize = '30px'
+        title.style.padding = '1%'
+        title.style.textAlign = 'center'
+        title.style.border = '2px solid darkblue'
+        title.style.borderRadius = '50px'
+
+        // create blog
+        const article = document.createElement('article')
+        article.classList.add('blog')
+        const h3 = document.createElement('h3')
+        h3.innerText = 'This heading is added by Batch-N-231-1'
+        const p = document.createElement('p')
+        p.innerText = 'Debitis iure modi, ex ullam cupiditate earum ad alias! Impedit officia qui deleniti veritatis consectetur    ullam at dignissimos soluta, atque laudantium nobis accusantium explicabo officiis porro quae'
+
+        article.appendChild(h3)
+        article.appendChild(p)
+
+        const myBlog = document.getElementById('blogSection')
+        myBlog.appendChild(article)
+
+        const blogClass = document.getElementsByClassName('blog')
+        console.log(blogClass);
+        for (const blog of blogClass) {
+            blog.style.padding = '20px'
+            blog.style.margin = '20px'
+            blog.style.textAlign = 'center'
+            blog.style.fontSize = '17px'
+            blog.style.background = 'azure'
+            blog.style.border = '3px solid slategrey'
+            blog.style.boxShadow = 'rgba(0, 0, 0, 0.35) 0px 5px 15px'
+            blog.style.borderRadius = '10px'
+
+        }
+
+        const li = document.createElement('li')
+        li.innerText = 'Home'
+        console.log(li);
+        const ul = document.getElementById('nav')
+        ul.appendChild(li)
+
+        const li1 = document.createElement('li')
+        li1.innerText = 'Blog'
+        console.log(li1);
+        const ul1 = document.getElementById('nav')
+        ul.appendChild(li1)
+
+
+        const li2 = document.createElement('li')
+        li2.innerText = 'About'
+        console.log(li2);
+        const ul2 = document.getElementById('nav')
+        ul.appendChild(li2)
+
+
+        const li3 = document.createElement('li')
+        li3.innerText = 'Contact us'
+        console.log(li3);
+        const ul3 = document.getElementById('nav')
+        ul.appendChild(li3)
+
+    </script>
+
+
+</body>
+
+</html>
